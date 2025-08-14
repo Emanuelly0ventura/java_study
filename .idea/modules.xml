@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ImparEPar/ImparEPar.iml" filepath="$PROJECT_DIR$/ImparEPar/ImparEPar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Biblioteca/Biblioteca.iml" filepath="$PROJECT_DIR$/Biblioteca/Biblioteca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MediaAluno/MediaAluno.iml" filepath="$PROJECT_DIR$/MediaAluno/MediaAluno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Poo/Poo.iml" filepath="$PROJECT_DIR$/Poo/Poo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Temperatura/Temperatura.iml" filepath="$PROJECT_DIR$/Temperatura/Temperatura.iml" />
       <module fileurl="file://$PROJECT_DIR$/coisa/coisa.iml" filepath="$PROJECT_DIR$/coisa/coisa.iml" />
       <module fileurl="file://$PROJECT_DIR$/javaStudy.iml" filepath="$PROJECT_DIR$/javaStudy.iml" />
