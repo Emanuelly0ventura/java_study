@@ -1,3 +1,5 @@
+package br.com.fiap.teste;
+
 import java.util.Scanner;
 
 public class TesteLivros {
