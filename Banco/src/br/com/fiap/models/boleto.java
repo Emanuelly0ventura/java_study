@@ -4,10 +4,10 @@ import br.com.fiap.interfaces.Comprovante;
 
 public class boleto extends  Pagamento implements Comprovante {
 
-    public abstract class ProcessarPagamentos{
+    public abstract static class ProcessarPagamentos{
 
     }
-    public abstract class EmitirComprovante{
+    public abstract static class EmitirComprovante{
 
     }
 

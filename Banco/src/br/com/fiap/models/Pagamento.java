@@ -28,10 +28,10 @@ public abstract class Pagamento {
         this.data = data;
     }
 
-    public abstract class ProcessarPagamentos{
+    public abstract static class ProcessarPagamentos{
 
     }
-    public abstract class EmitirComprovante{
+    public abstract static class EmitirComprovante{
 
     }
 }
