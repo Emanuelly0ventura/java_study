@@ -38,4 +38,5 @@ public abstract class Pagamento {
     public abstract static class EmitirComprovante{
 
     }
+
 }

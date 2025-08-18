@@ -16,12 +16,26 @@ public class TesteBanco {
 
 
         //Introduçao
-        System.out.println("Digite seu nome: ");
-        reg.setNome(banco.nextLine());
-        System.out.println("Digite o valor da compra: ");
-        reg.setPreco(banco.nextDouble());
-        System.out.println("Digite seu cpf: ");
-        reg.setCpf(banco.nextDouble());
+        try {
+
+            System.out.println("Digite seu nome: ");
+            reg.setNome(banco.nextLine());
+        }catch (Exception e){
+            System.out.println("Nome inválido!");
+        }
+        try {
+            System.out.println("Digite o valor da compra: ");
+            reg.setPreco(banco.nextDouble());
+        }catch (Exception e){
+            System.out.println("Valor errado!");
+        }
+
+        try {
+            System.out.println("Digite seu cpf: ");
+            reg.setCpf(banco.nextDouble());
+        } catch (Exception e) {
+            System.out.println("CPF inválido!");
+        }
 
 
         //Menu
@@ -34,7 +48,30 @@ public class TesteBanco {
         switch (opcao) {
             //cartão
             case 1:
-                System.out.println("opa Cartão?" );
+                 try {
+                     System.out.println("Digite o numero do cartão: ");
+                     reg.setNumCartao(banco.nextInt());
+                 }   catch (Exception e) {
+                     System.out.println("Erro, numero do cartão inválido!");
+                 }
+
+
+                 try {
+                     System.out.println("Digite o codigo de segurança: ");
+                     reg.setCodSeguranca(banco.nextInt());
+                 }catch (Exception e) {
+                     System.out.println("Erro, numero de segurança inválido!");
+                 }
+
+
+                System.out.println("------------------------------\n" );
+                System.out.println("Nome do comprador: " + reg.getNome());
+                System.out.println("Valor: " + reg.getPreco());
+                System.out.println("CPF do comprador: " + reg.getCpf());
+                System.out.println("Compra de valor: R$" + car.getPreco() + " realizado com sucesso!");
+                System.out.println("-----------------------------\n");
+
+
             break;
 
             //Boleto
@@ -47,6 +84,8 @@ public class TesteBanco {
                 String codigoBarras = bol.gerarSequencia(10, 100);
                 System.out.println("Codigo de Barras: " + codigoBarras);
                 System.out.println("-----------------------------\n");
+
+                System.out.println("Você pode realizar o pagamento ate 5 dias uteis depois de ter gerado o boleto!");
             break;
 
             //sair sistema
