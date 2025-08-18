@@ -4,10 +4,8 @@ import br.com.fiap.interfaces.Comprovante;
 
 public class CartaoDeCredito extends Pagamento implements Comprovante {
 
-    public abstract static class ProcessarPagamentos{
 
-    }
-    public abstract static class EmitirComprovante{
+    public void ProcessarPagamentos(){
 
     }
 

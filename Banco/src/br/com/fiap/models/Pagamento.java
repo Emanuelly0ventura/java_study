@@ -5,7 +5,7 @@ public abstract class Pagamento {
     private double valor;
     private String data;
     private String numeroCartao;
-    private String cidigoBarras;
+    private String codigoBarras;
 
     public void Construtores(double valor, String data){
         this.valor = valor;
@@ -19,6 +19,8 @@ public abstract class Pagamento {
     public String getData() {
         return data;
     }
+    public String getCidigoBarras() {return codigoBarras;}
+    public String getNumeroCartao() {return numeroCartao;}
 
     //Setters
     public void setValor(double valor) {
@@ -27,6 +29,8 @@ public abstract class Pagamento {
     public void setData(String data) {
         this.data = data;
     }
+    public void setNumeroCartao(String numeroCartao) {this.numeroCartao = numeroCartao;}
+    public void setCidigoBarras(String cidigoBarras) {this.codigoBarras = cidigoBarras;}
 
     public abstract static class ProcessarPagamentos{
 
