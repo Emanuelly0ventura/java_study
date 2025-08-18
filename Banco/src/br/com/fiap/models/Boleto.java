@@ -1,5 +1,5 @@
 package br.com.fiap.models;
-
+import java.util.*;
 import br.com.fiap.interfaces.Comprovante;
 
 import java.util.Random;
@@ -9,13 +9,23 @@ public class Boleto extends  Pagamento implements Comprovante {
     private Random random;
 
 
-    public int[] gerarSequencia( int qtd, int limite){
-        int[] numeros = new int[qtd];
+    public String gerarSequencia(int quantidade, int limite) {
 
-        for (int i = 0; i< qtd; i++){
-            numeros[i] = random.nextInt(limite);
+        List<Integer> lista = new ArrayList<>();
+        for (int i = 0; i < limite; i++) {
+            lista.add(i);
         }
-        return numeros;
+
+        Collections.shuffle(lista);
+
+
+        List<Integer> selecionados = lista.subList(0, quantidade);
+
+        return selecionados.toString()
+                .replace("[", "")
+                .replace("]", "")
+                .replace(",", "-")
+                .replace(" ", "");
     }
 
     public void ProcessarPagamentos(){

@@ -13,7 +13,6 @@ public class testeCelsius {
             cel.Converter();
 
         }catch (Exception e){
-
             System.out.println("ERRO");
         }finally {
             System.out.println("finalizado");

@@ -3,15 +3,15 @@ package br.com.fiap.models;
 public class Registro {
     private String nome;
     private double preco;
-    private int cpf;
+    private double cpf;
 
     //getters
     public String getNome() {return nome;}
     public double getPreco() {return preco;}
-    public int getCpf() {return cpf;}
+    public double getCpf() {return cpf;}
 
     //setters
     public void setNome(String nome) {this.nome = nome;}
     public void setPreco(double preco) {this.preco = preco;}
-    public void setCpf(int cpf) {this.cpf = cpf;}
+    public void setCpf(double cpf) {this.cpf = cpf;}
 }
