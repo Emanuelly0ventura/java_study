@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/Biblioteca/Biblioteca.iml" filepath="$PROJECT_DIR$/Biblioteca/Biblioteca.iml" />
       <module fileurl="file://$PROJECT_DIR$/Livraria/Livraria.iml" filepath="$PROJECT_DIR$/Livraria/Livraria.iml" />
       <module fileurl="file://$PROJECT_DIR$/MediaAluno/MediaAluno.iml" filepath="$PROJECT_DIR$/MediaAluno/MediaAluno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SistemaNota/SistemaNota.iml" filepath="$PROJECT_DIR$/SistemaNota/SistemaNota.iml" />
       <module fileurl="file://$PROJECT_DIR$/Temperatura/Temperatura.iml" filepath="$PROJECT_DIR$/Temperatura/Temperatura.iml" />
       <module fileurl="file://$PROJECT_DIR$/agenda/agenda.iml" filepath="$PROJECT_DIR$/agenda/agenda.iml" />
       <module fileurl="file://$PROJECT_DIR$/coisa/coisa.iml" filepath="$PROJECT_DIR$/coisa/coisa.iml" />
