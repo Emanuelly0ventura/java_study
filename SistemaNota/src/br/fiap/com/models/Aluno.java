@@ -15,6 +15,8 @@ public class Aluno {
     }
 
     //getter
+
+
     public String getNome() {return nome;}
     public int getIdade() {return idade;}
     public double getNota1() {return nota1;}

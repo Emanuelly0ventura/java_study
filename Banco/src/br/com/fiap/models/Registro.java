@@ -3,7 +3,7 @@ package br.com.fiap.models;
 public class Registro {
     private String nome;
     private double preco;
-    private double cpf;
+    private String cpf;
     private int NumCartao;
     private int CodSeguranca;
 
@@ -17,7 +17,10 @@ public class Registro {
     //setters
     public void setNome(String nome) {this.nome = nome;}
     public void setPreco(double preco) {this.preco = preco;}
-    public void setCpf(double cpf) {this.cpf = cpf;}
+    public void setCpf(String cpf) {this.cpf = cpf;}
     public void setNumCartao(int NumCartao) {this.NumCartao = NumCartao;}
     public void setCodSeguranca(int codSeguranca) {CodSeguranca = codSeguranca;}
+
+
+
 }

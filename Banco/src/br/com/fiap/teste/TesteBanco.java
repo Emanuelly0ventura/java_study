@@ -4,6 +4,7 @@ import br.com.fiap.models.Boleto;
 import br.com.fiap.models.CartaoDeCredito;
 import br.com.fiap.models.Registro;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TesteBanco {
@@ -15,27 +16,55 @@ public class TesteBanco {
         CartaoDeCredito car = new CartaoDeCredito();
 
 
+
         //Introduçao
-        try {
+        //nome
+        while (true) {
+            try {
+                System.out.println("Digite seu nome: ");
+                reg.setNome(banco.nextLine());
+                if(reg.getNome().matches("[\\p{L} ]+")){
+                    break;
+                }else{
+                    System.out.println("Entrada inválida! Digite apenas letras.");
+                }
 
-            System.out.println("Digite seu nome: ");
-            reg.setNome(banco.nextLine());
-        }catch (Exception e){
-            System.out.println("Nome inválido!");
-        }
-        try {
-            System.out.println("Digite o valor da compra: ");
-            reg.setPreco(banco.nextDouble());
-        }catch (Exception e){
-            System.out.println("Valor errado!");
+            } catch (InputMismatchException e){
+                System.out.println("numeros não são permitidos");
+                banco.nextLine();
+            }
+            catch (Exception e) {
+                System.out.println("Nome inválido!");
+                banco.nextLine();
+            }
         }
 
-        try {
-            System.out.println("Digite seu cpf: ");
-            reg.setCpf(banco.nextDouble());
-        } catch (Exception e) {
-            System.out.println("CPF inválido!");
+        //valor
+        while (true) {
+            try {
+                System.out.println("Digite o valor da compra: ");
+                reg.setPreco(banco.nextDouble());
+                break;
+            } catch (Exception e) {
+                System.out.println("Valor errado!");
+                banco.nextLine();
+            }
         }
+
+        //cpf
+//        while (true) {
+//            System.out.println("Digite seu CPF: ");
+//            reg.setCpf(banco.nextLine());
+//
+//            if (reg.getCpf().matches("\\d{11}")) {
+//                System.out.println("CPF válido: " + reg.getCpf());
+//                break;
+//            } else {
+//                System.out.println("Número inválido, tente novamente!");
+//            }
+//        }
+
+
 
 
         //Menu
@@ -48,20 +77,55 @@ public class TesteBanco {
         switch (opcao) {
             //cartão
             case 1:
-                 try {
-                     System.out.println("Digite o numero do cartão: ");
-                     reg.setNumCartao(banco.nextInt());
-                 }   catch (Exception e) {
-                     System.out.println("Erro, numero do cartão inválido!");
-                 }
+                while (true) {
+                    try {
+                        System.out.println("Digite o numero do cartão: ");
+                        reg.setNumCartao(banco.nextInt());
+                        if(reg.getNumCartao() == 9 ){
+                            break;
+                        }else {
+                            System.out.println("Numero invalido, tente novamente");
+                        }
+
+                    } catch (InputMismatchException e) {
+                        System.out.println("Erro, não é permitido letras!");
+                        banco.nextLine();
+                    }catch ( Exception e){
+                        System.out.println("Erro, numero de segurança inválido!");
+                    }
 
 
-                 try {
-                     System.out.println("Digite o codigo de segurança: ");
-                     reg.setCodSeguranca(banco.nextInt());
-                 }catch (Exception e) {
-                     System.out.println("Erro, numero de segurança inválido!");
-                 }
+//                    String numCartao = banco.next();
+//                    if (numCartao.matches("\\d{16}")) {
+//                        reg.setNumCartao(numCartao);
+//                        break;
+//                    } else {
+//                        System.out.println("Número de cartão inválido, digite 16 dígitos.");
+//                    }
+                }
+
+                while (true) {
+                    try {
+                        System.out.println("Digite o codigo de segurança: ");
+                        reg.setCodSeguranca(banco.nextInt());
+                        if(reg.getNumCartao() == 3 ){
+                            break;
+                        }else {
+                            System.out.println("Numero invalido, tente novamente");
+                        }
+                    } catch (InputMismatchException e) {
+                        System.out.println("Erro, não é permitido letras!");
+                        banco.nextLine();
+                    }catch ( Exception e){
+                        System.out.println("Erro, numero de segurança inválido!");
+                    }
+
+//                    if (reg.getCodSeguranca() >= 100 && reg.getCodSeguranca() <= 999) {
+//                        break;
+//                    } else {
+//                        System.out.println("Código de segurança inválido (deve ter 3 dígitos).");
+//                    }
+                }
 
 
                 System.out.println("------------------------------\n" );
@@ -70,6 +134,10 @@ public class TesteBanco {
                 System.out.println("CPF do comprador: " + reg.getCpf());
                 System.out.println("Compra de valor: R$" + car.getPreco() + " realizado com sucesso!");
                 System.out.println("-----------------------------\n");
+
+
+//                car.setPreco(reg.getPreco());
+//                System.out.println("Compra de valor: R$" + car.getPreco() + " realizado com sucesso!");
 
 
             break;
