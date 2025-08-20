@@ -44,6 +44,7 @@ public class TesteBanco {
             try {
                 System.out.println("Digite o valor da compra: ");
                 reg.setPreco(banco.nextDouble());
+                banco.nextLine();
                 break;
             } catch (Exception e) {
                 System.out.println("Valor errado!");
@@ -52,17 +53,16 @@ public class TesteBanco {
         }
 
         //cpf
-//        while (true) {
-//            System.out.println("Digite seu CPF: ");
-//            reg.setCpf(banco.nextLine());
-//
-//            if (reg.getCpf().matches("\\d{11}")) {
-//                System.out.println("CPF válido: " + reg.getCpf());
-//                break;
-//            } else {
-//                System.out.println("Número inválido, tente novamente!");
-//            }
-//        }
+        while (true) {
+            System.out.println("Digite seu CPF: ");
+            reg.setCpf(banco.nextLine());
+
+            if (reg.getCpf().matches("\\d{11}")) {
+                break;
+            } else {
+                System.out.println("Número inválido, tente novamente!");
+            }
+        }
 
 
 
@@ -78,53 +78,28 @@ public class TesteBanco {
             //cartão
             case 1:
                 while (true) {
-                    try {
-                        System.out.println("Digite o numero do cartão: ");
-                        reg.setNumCartao(banco.nextInt());
-                        if(reg.getNumCartao() == 9 ){
-                            break;
-                        }else {
-                            System.out.println("Numero invalido, tente novamente");
-                        }
+                    System.out.println("Digite o numero do cartão: ");
 
-                    } catch (InputMismatchException e) {
-                        System.out.println("Erro, não é permitido letras!");
-                        banco.nextLine();
-                    }catch ( Exception e){
-                        System.out.println("Erro, numero de segurança inválido!");
+                    String numCartao = banco.next();
+                    if (numCartao.matches("\\d{9}")) {
+                        reg.setNumCartao(numCartao);
+                        break;
+                    } else {
+                        System.out.println("Número de cartão inválido, digite 16 dígitos.");
                     }
-
-
-//                    String numCartao = banco.next();
-//                    if (numCartao.matches("\\d{16}")) {
-//                        reg.setNumCartao(numCartao);
-//                        break;
-//                    } else {
-//                        System.out.println("Número de cartão inválido, digite 16 dígitos.");
-//                    }
                 }
 
                 while (true) {
-                    try {
                         System.out.println("Digite o codigo de segurança: ");
-                        reg.setCodSeguranca(banco.nextInt());
-                        if(reg.getNumCartao() == 3 ){
+
+                        String  CodSeguranca = banco.next();
+                        if(CodSeguranca.matches("\\d{3}")){
+                            reg.setCodSeguranca(Integer.parseInt(CodSeguranca));
                             break;
-                        }else {
+                        }
+                        else {
                             System.out.println("Numero invalido, tente novamente");
                         }
-                    } catch (InputMismatchException e) {
-                        System.out.println("Erro, não é permitido letras!");
-                        banco.nextLine();
-                    }catch ( Exception e){
-                        System.out.println("Erro, numero de segurança inválido!");
-                    }
-
-//                    if (reg.getCodSeguranca() >= 100 && reg.getCodSeguranca() <= 999) {
-//                        break;
-//                    } else {
-//                        System.out.println("Código de segurança inválido (deve ter 3 dígitos).");
-//                    }
                 }
 
 
@@ -132,12 +107,9 @@ public class TesteBanco {
                 System.out.println("Nome do comprador: " + reg.getNome());
                 System.out.println("Valor: " + reg.getPreco());
                 System.out.println("CPF do comprador: " + reg.getCpf());
+                car.setPreco(reg.getPreco());
                 System.out.println("Compra de valor: R$" + car.getPreco() + " realizado com sucesso!");
                 System.out.println("-----------------------------\n");
-
-
-//                car.setPreco(reg.getPreco());
-//                System.out.println("Compra de valor: R$" + car.getPreco() + " realizado com sucesso!");
 
 
             break;
