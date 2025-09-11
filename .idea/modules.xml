@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/Arquivos/Arquivos.iml" filepath="$PROJECT_DIR$/Arquivos/Arquivos.iml" />
       <module fileurl="file://$PROJECT_DIR$/Banco/Banco.iml" filepath="$PROJECT_DIR$/Banco/Banco.iml" />
       <module fileurl="file://$PROJECT_DIR$/Biblioteca/Biblioteca.iml" filepath="$PROJECT_DIR$/Biblioteca/Biblioteca.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DDD-agenda-arquivo/DDD-agenda-arquivo.iml" filepath="$PROJECT_DIR$/DDD-agenda-arquivo/DDD-agenda-arquivo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Livraria/Livraria.iml" filepath="$PROJECT_DIR$/Livraria/Livraria.iml" />
       <module fileurl="file://$PROJECT_DIR$/MediaAluno/MediaAluno.iml" filepath="$PROJECT_DIR$/MediaAluno/MediaAluno.iml" />
       <module fileurl="file://$PROJECT_DIR$/SistemaNota/SistemaNota.iml" filepath="$PROJECT_DIR$/SistemaNota/SistemaNota.iml" />
